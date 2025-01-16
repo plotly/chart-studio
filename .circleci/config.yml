@@ -1,0 +1,27 @@
+jobs:
+  python_38_chart_studio:
+    docker:
+      - image: cimg/python:3.8
+    resource_class: large
+
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install --upgrade pip wheel
+            pip install -r ./test_requirements/requirements_38.txt
+      - run:
+          name: Tests
+          command: |
+            cd packages/python/chart-studio
+            . venv/bin/activate
+            pytest -x chart_studio/tests/
+          no_output_timeout: 20m
+
+workflows:
+  test:
+    jobs:
+      - python_38_chart_studio
