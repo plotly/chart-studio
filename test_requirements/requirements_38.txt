@@ -1,0 +1,11 @@
+decorator
+nose
+requests
+pytz
+retrying
+pytest
+pandas
+plotly
+numpy
+anywidget
+matplotlib

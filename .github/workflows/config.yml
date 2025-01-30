@@ -1,0 +1,25 @@
+name: Run unit tests (Python 3.8)
+on: [ push ]
+
+jobs:
+  python_38_chart_studio:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+      - name: Install dependencies
+        run: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install --upgrade pip wheel
+            pip install -r ./test_requirements/requirements_38.txt
+      - name: Run unit tests
+        run: |
+            . venv/bin/activate
+            pytest -x chart_studio/tests/
+        timeout-minutes: 20
+

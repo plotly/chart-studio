@@ -44,7 +44,10 @@ class PlotMPLTest(TestCase):
         ax.plot([1, 2, 3])
         title = "new title"
         update = {"layout": {"title": title}}
-        url = py.plot_mpl(fig, update=update, filename="nosetests", auto_open=False)
+        # Note: Changed filename from "nosetests" to "nosetests2" because the
+        # previous filename was resulting in a recurring error --
+        # `chart_studio.exceptions.PlotlyRequestError: Sorry, a file named 'nosetests_grid' already exists`
+        url = py.plot_mpl(fig, update=update, filename="nosetests2", auto_open=False)
         un = url.replace("https://plotly.com/~", "").split("/")[0]
         fid = url.replace("https://plotly.com/~", "").split("/")[1]
         pfig = py.get_figure(un, fid)
