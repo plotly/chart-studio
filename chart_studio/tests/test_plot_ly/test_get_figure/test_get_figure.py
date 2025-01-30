@@ -94,4 +94,9 @@ class TestBytesVStrings(PlotlyTestCase):
         ak = "786r5mecv0"
         url = "https://plotly.com/~PlotlyImageTest/13185/"
         py.sign_in(un, ak)
-        py.get_figure(url)
+        # Note: raw=True added because the specified chart contains 
+        # the property 'titlefont' which is no longer supported in 
+        # plotly.py 6.0.0, so an error is raised when trying to create
+        # the chart object. raw=True just returns the raw JSON without
+        # trying to create the chart object.
+        py.get_figure(url, raw=True)
