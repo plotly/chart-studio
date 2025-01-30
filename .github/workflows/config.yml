@@ -19,7 +19,6 @@ jobs:
             pip install -r ./test_requirements/requirements_38.txt
       - name: Run unit tests
         run: |
-            cd packages/python/chart-studio
             . venv/bin/activate
             pytest -x chart_studio/tests/
         timeout-minutes: 20
