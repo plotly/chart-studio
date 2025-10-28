@@ -10,14 +10,17 @@ def readme():
 
 setup(
     name="chart-studio",
-    version="1.1.0",
+    version="2.0.0",
     author="Chris P",
     author_email="chris@plot.ly",
-    maintainer="Jon Mease",
-    maintainer_email="jon@plot.ly",
-    url="https://plot.ly/python/",
-    project_urls={"Github": "https://github.com/plotly/chart-studio"},
-    description="Utilities for interfacing with plotly's Chart Studio",
+    maintainer="Plotly Libraries Team",
+    maintainer_email="community@plot.ly",
+    url="https://plot.ly/",
+    project_urls={
+        "Deprecated": "https://github.com/plotly/chart-studio/blob/main/README.md",
+        "Github": "https://github.com/plotly/chart-studio"
+    },
+    description="DEPRECATED: utilities for interfacing with Plotly's Chart Studio",
     long_description=readme(),
     long_description_content_type="text/markdown",
     classifiers=[
