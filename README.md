@@ -1,6 +1,6 @@
 # chart-studio
 
-> **This project is deprecated as of October 2025.**
+> **This project is deprecated as of October 2025 due to the [end of the Chart Studio web service](https://plotly.com/chart-studio-updates/).**
 
 The chart-studio Python package contains utilities for interfacing with Plotly's Chart Studio service (both Chart Studio cloud and Chart Studio On-Prem).
 
