@@ -1,4 +1,7 @@
 # chart-studio
+
+> **This project is deprecated as of October 2025.**
+
 The chart-studio Python package contains utilities for interfacing with Plotly's Chart Studio service (both Chart Studio cloud and Chart Studio On-Prem).
 
 Prior to plotly.py version 4, these Chart Studio utilities were included in the `plotly` package under the `plotly.plotly` module. As part of plotly.py version 4, the Chart Studio functionality was removed from the `plotly` package and released in this `chart-studio` package.
